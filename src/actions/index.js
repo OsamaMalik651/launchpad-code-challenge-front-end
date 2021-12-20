@@ -1,6 +1,7 @@
 import jsonPlaceholder from "../apis/jsonPlaceholder";
 import countries from "../apis/countriesApi";
 import universities from "../apis/universitiesApi";
+import postalLookupApi from "../apis/postalLookupApi";
 
 export const fetchPosts = () => async (dispatch) => {
   const response = await jsonPlaceholder.get("/posts");
@@ -42,4 +43,9 @@ export const fetchCountries = () => async (dispatch) => {
 export const fetchUniversities = (country) => async (dispatch) => {
   const response = await universities.get(`/search?country=${country}`);
   dispatch({ type: "GET_UNIVERSITIES", payload: response.data });
+};
+//Postal Lookup Action Creator
+export const fetchPlaces = (postalCode) => async (dispatch) => {
+  const response = await postalLookupApi.get(`/CA/${postalCode}`);
+  dispatch({ type: "GET_PLACES", payload: response.data });
 };
