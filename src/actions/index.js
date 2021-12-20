@@ -1,4 +1,6 @@
 import jsonPlaceholder from "../apis/jsonPlaceholder";
+import countries from "../apis/countriesApi";
+import universities from "../apis/universitiesApi";
 
 export const fetchPosts = () => async (dispatch) => {
   const response = await jsonPlaceholder.get("/posts");
@@ -28,4 +30,16 @@ export const editPost = (id, data) => async (dispatch) => {
 export const deletePost = (id) => async (dispatch) => {
   const response = await jsonPlaceholder.delete(`/posts/${id}`);
   dispatch({ type: "SET_STATUS", payload: response.status });
+};
+
+//Countries action Creator
+export const fetchCountries = () => async (dispatch) => {
+  const response = await countries.get("/countries");
+  dispatch({ type: "GET_COUNTRIES", payload: response.data.data });
+};
+
+//Universities Action Creator
+export const fetchUniversities = (country) => async (dispatch) => {
+  const response = await universities.get(`/search?country=${country}`);
+  dispatch({ type: "GET_UNIVERSITIES", payload: response.data });
 };

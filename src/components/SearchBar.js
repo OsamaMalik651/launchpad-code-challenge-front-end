@@ -1,12 +1,12 @@
 import { React, useState } from "react";
 
 const SearchBar = (props) => {
-  const [userId, setUserId] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    const userID = userId;
-    props.onClick(userID);
-    setUserId("");
+
+    props.onClick(searchTerm);
+    setSearchTerm("");
   };
   return (
     <div>
@@ -17,13 +17,13 @@ const SearchBar = (props) => {
               <div className="ui centered two column grid">
                 <div class="field twelve wide column">
                   <label style={{ fontSize: "1.3rem" }}>
-                    Search by User ID
+                    Search by {props.label}
                   </label>
                   <div className="ui action input">
                     <input
-                      type="number"
-                      value={userId}
-                      onChange={(e) => setUserId(e.target.value)}
+                      type={props.type}
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
                       min="1"
                       max="20"
                     />

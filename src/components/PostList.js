@@ -15,6 +15,7 @@ class PostList extends Component {
     this.state = {
       show: false,
       action: "",
+      placeholderText: "Enter User Id to search posts",
     };
   }
   componentDidMount() {
@@ -58,7 +59,7 @@ class PostList extends Component {
   render() {
     return (
       <div className="ui center aligned container">
-        <SearchBar onClick={this.searchPosts} />
+        <SearchBar type="number" onClick={this.searchPosts} label="User Id" />
         <div className="ui segment">
           <button
             className="ui primary button "
