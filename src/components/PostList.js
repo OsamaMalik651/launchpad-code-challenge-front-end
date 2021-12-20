@@ -59,7 +59,13 @@ class PostList extends Component {
   render() {
     return (
       <div className="ui center aligned container">
-        <SearchBar type="number" onClick={this.searchPosts} label="User Id" />
+        <SearchBar
+          type="number"
+          onClick={this.searchPosts}
+          label="User Id"
+          min="1"
+          max="20"
+        />
         <div className="ui segment">
           <button
             className="ui primary button "
