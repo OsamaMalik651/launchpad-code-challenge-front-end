@@ -7,15 +7,15 @@ import Universities from "./Universities";
 const App = () => {
   return (
     <div className="ui container">
-      <BrowserRouter>
+      <BrowserRouter basename="/launchpad-code-challenge-front-end">
         <Header />
         <Routes>
           {/* Home/Posts*/}
           <Route path="/" exact element={<Home />} />
           {/* Universities */}
-          <Route path="/universities" exact element={<Universities />} />
+          <Route path="/launchpad-code-challenge-front-end/universities" exact element={<Universities />} />
           {/* Postal Lookup */}
-          <Route path="/postallookup" exact element={<PostalLookup />} />
+          <Route path="/launchpad-code-challenge-front-end/postallookup" exact element={<PostalLookup />} />
         </Routes>
       </BrowserRouter>
     </div>
