@@ -1,12 +1,14 @@
 {
   "name": "osamamalik_launcpad-react-code-challenge",
   "version": "0.1.0",
+  "homepage": "https://osamamalik651.github.io/launchpad-code-challenge-front-end/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.24.0",
+    "gh-pages": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-dropdown-now": "^6.0.1",
@@ -19,6 +21,8 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b main build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
