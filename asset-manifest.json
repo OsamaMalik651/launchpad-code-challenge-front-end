@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/launchpad-code-challenge-front-end/static/css/main.832508da.css",
-    "main.js": "/launchpad-code-challenge-front-end/static/js/main.baeb72d2.js",
+    "main.js": "/launchpad-code-challenge-front-end/static/js/main.6a12f1cc.js",
     "index.html": "/launchpad-code-challenge-front-end/index.html",
     "main.832508da.css.map": "/launchpad-code-challenge-front-end/static/css/main.832508da.css.map",
-    "main.baeb72d2.js.map": "/launchpad-code-challenge-front-end/static/js/main.baeb72d2.js.map"
+    "main.6a12f1cc.js.map": "/launchpad-code-challenge-front-end/static/js/main.6a12f1cc.js.map"
   },
   "entrypoints": [
     "static/css/main.832508da.css",
-    "static/js/main.baeb72d2.js"
+    "static/js/main.6a12f1cc.js"
   ]
 }
