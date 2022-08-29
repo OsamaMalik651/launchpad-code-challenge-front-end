@@ -11,11 +11,16 @@ const App = () => {
         <Header />
         <Routes>
           {/* Home/Posts*/}
-          <Route path="/" exact element={<Home />} />
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="universities" exact element={<Universities />} />
+            <Route path="/postallookup" exact element={<PostalLookup />} />
+
+          </Route>
           {/* Universities */}
-          <Route path="/launchpad-code-challenge-front-end/universities" exact element={<Universities />} />
+          {/* <Route path="/universities" exact element={<Universities />} /> */}
           {/* Postal Lookup */}
-          <Route path="/launchpad-code-challenge-front-end/postallookup" exact element={<PostalLookup />} />
+          {/* <Route path="/postallookup" exact element={<PostalLookup />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
